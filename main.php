@@ -37,44 +37,25 @@ require_once 'vendor/querytodatabase.php';
             <div class="headercart">
                 <div class="headercart__body">
                     <h1>Состав корзины</h1>
+                    <div class="emptyheadercart"></div>
                     <div class="headercart__body__content">
                         <table id="cart_table">
                             <thead>
                             <tr id="tabletitle">
-                                <th>Наименование</th>
-                                <th>Марка</th>
-                                <th>Модель</th>
-                                <th>Цена за ед.
+                                <th id="title__table__name">Наименование</th>
+                                <th id="title__table__price">Цена за ед.
                                     (руб.)</th>
-                                <th>Кол-во</th>
+                                <th id="title__table__count">Количество</th>
                             </tr>
                             </thead>
                             <tbody class="carttableout"> </tbody>
                         </table>
                         <div class="tablesum">
-                           <p>Итог: 228 руб.</p>
-<!--                            <button id="button1">Очистить корзину</button>-->
+                           Итог: <span class="summa"></span>.<sup>00</sup> &#8381
                         </div>
                         <div class="orderheaderbtns">
                             <a id="button1">Быстрый заказ</a>
                             <button id="button2">Оформить заказ</button>
-                            <div id="popup3" class="popup">
-                                <a href="#header" class="popup__area"></a>
-                                <div class="popup__body">
-                                    <div class="popup__content">
-                                        <div class="popup__title">Оформление заказа</div>
-                                        <div class="popup__fill">
-                                            <form action="/form-lesson/mail.php"  method="post">
-                                                <input value="<?=$_SESSION['user']['login']?>" name="login" type="text">
-                                                <input value="<?=$_SESSION['user']['fullname']?>" name="name" type="text">
-                                                <input value="<?=$_SESSION['user']['email']?>" name="email" type="text">
-                                                <input type="text" name="receivecart" value="" class="meow">
-                                                <button type="submit" name="submit-btn" class="formsend">Оформить</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

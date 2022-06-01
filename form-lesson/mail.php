@@ -10,6 +10,8 @@ $c = $_POST['email'];
 
 $d = $_POST['receivecart'];
 
+$e = $_POST['totalsumm'];
+
 $datetime = date('Y.m.d H:i:s');
 
 
@@ -62,8 +64,9 @@ $mail->Subject = 'Заявка с тестового сайта для ' . $a;
 $mail->Body = '';
 $mail->msgHTML("<html><body>
                
-                <p> $b, это тестовое письмо.</p>
-                <p>Состав вашего заказа: $output.</p>
+                <p> $b, благодарим Вас за заказ на DetailHelper.</p>
+                <p>Состав вашего заказа: $output</p>
+                <p>Итоговая сумма забронированных товаров: $e рублей.</p>
                 </html></body>");
 
 if (!$mail->send()) {

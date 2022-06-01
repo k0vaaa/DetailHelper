@@ -139,6 +139,7 @@ body {
 #filter__title {
 	padding: 0;
 	margin: 0 0 20px 0;
+	font-weight: 400;
 
 }
 
@@ -784,6 +785,7 @@ form {
 	display: none;
 }
 
+
 /*footer {*/
 /*	text-align: center;*/
 /*	width: 100%;*/
@@ -924,6 +926,7 @@ form {
 	margin-left: auto;
 	left: auto;
 	right: auto;
+	transition: all .3s ease;
 }
 
 .select__current {
@@ -974,11 +977,13 @@ form {
 	-webkit-transform: rotate(90deg); /* Для Safari, Chrome, iOS */
 	-o-transform: rotate(90deg); /* Для Opera */
 	transform: rotate(90deg);
+	transition: all .3s ease;
 }
 
 #arrowfilter {
 	width: 25px;
 	height: 25px;
+	transition: all .22s ease;
 }
 
 .sortimgs img {
@@ -1020,7 +1025,6 @@ form {
 
 .headercart__body__content {
 	color: black;
-	/*border: 1px dotted black;*/
 	text-align: left;
 	padding: 0;
 }
@@ -1028,7 +1032,6 @@ form {
 #tabletitle th {
 	font-weight: 400;
 	font-size: 15px;
-	text-align: center;
 }
 
 #cart_table {
@@ -1039,18 +1042,15 @@ form {
 
 .carttableout td {
 	border-right: 1px solid black;
-	text-align: center;
-	padding: 5px;
 	font-weight: 500;
 }
-
-.carttableout tr {
-}
-
+/*.carttableout {*/
+/*	padding-right: 30px;*/
+/*}*/
 
 .tablesum {
 	text-align: right;
-	padding-right: 20px;
+	padding-right: 40px;
 	font-weight: 500;
 	font-size: 35px;
 }
@@ -1151,4 +1151,60 @@ form {
 #button1:focus:after {
 	color: #4b4b4b;
 	width: 100%;
+}
+
+.plus {
+	padding: 0 10px 0 10px ;
+}
+.minus {
+	padding: 0 10px 0 10px ;
+}
+
+
+.tablecount {
+	display: flex;
+	justify-content: space-between;
+	width: 170px;
+}
+
+.tableprice {
+	text-align: center;
+}
+
+.tablecount	span {
+	text-align: center;
+	flex: 1;
+	vertical-align: bottom;
+	padding-top: 4px;
+}
+
+#changequantity {
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: black;
+	font-size: 30px;
+	line-height: 40px;
+}
+.table__name__brand__model {
+	padding: 0 0 0 15px;
+}
+
+#title__table__price {
+	text-align: center;
+}
+#title__table__count {
+	text-align: center;
+	padding: 0 15px 0 0;
+}
+#title__table__name {
+	padding-left: 15px;
+}
+#emptycartout {
+	color: black;
+	padding-left: 20px;
+}
+
+#emptycartout a {
+	color:#2196f3;
 }

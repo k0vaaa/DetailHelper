@@ -8,7 +8,6 @@ $(document).ready(function () {
     }
     loadCart(); /*инициализация стартовых функций (загрузка корзины, проверка корзины на длину,  создание таблицы корзины)*/
     cartCheck();
-    createTable();
 });
 function createTable() { /*функция создания таблицы с заказом*/
     let out = '';
@@ -104,9 +103,19 @@ function loadCart() { /*загрузка корзины при переходе 
     }
     createTable(); /*функция пересоздает таблицу для динамического обновления*/
 };
+
+function totalSum() {
+    let cart = JSON.parse(localStorage.cart);
+    let summa=0;
+    for (let i=0; i<cart.length; i++) {
+        summa+= cart[i].good.price*cart[i].good.count;
+    }
+    return summa;
+}
 function sendLocalStorage(){ /*функция отправки содержимого корзины, используемого при формировании email-письма*/
     let cart = JSON.stringify(localStorage.getItem('cart'));
     document.querySelector('[name=receivecart]').value = cart;
+    document.querySelector('[name=totalsumm]').value = totalSum();
 }
 
 

@@ -117,7 +117,7 @@
                     <a href="#header" class="popup__area"></a>
                     <div class="popup__body">
                         <div class="popup__content">
-<!--                            <a href="#header" class="popup__close">X</a>-->
+                            <a href="#header" class="popup__close">X</a>
                             <div class="popup__title">Изменение заказа</div>
                             <div class="popup__fill">
                                 <div class="basket"></div>
@@ -129,7 +129,7 @@
                     <a href="#header" class="popup__area"></a>
                     <div class="popup__body">
                         <div class="popup__content">
-<!--                            <a href="#header" class="popup__close">X</a>-->
+                            <a href="#header" class="popup__close">X</a>
                             <div class="popup__title">Удаление заказа</div>
                             <div class="popup__fill">
                                 Вы уверены, что хотите удалить ВЕСЬ заказ?
@@ -144,6 +144,7 @@
                     <a href="#header" class="popup__area"></a>
                     <div class="popup__body">
                         <div class="popup__content">
+                            <a href="#header" class="popup__close">X</a>
                             <div class="popup__title">Оформление заказа</div>
                             <div class="popup__fill">
                                 <form action="/form-lesson/mail.php"  method="post">
@@ -151,6 +152,7 @@
                                     <input value="<?=$_SESSION['user']['fullname']?>" name="name" type="text">
                                     <input value="<?=$_SESSION['user']['email']?>" name="email" type="text">
                                     <input type="text" name="receivecart" value="" class="meow">
+                                    <input type="text" name="totalsumm" value="" class="meow">
                                     <button type="submit" name="submit-btn" class="formsend">Оформить</button>
                                 </form>
                             </div>
