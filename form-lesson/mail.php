@@ -14,15 +14,12 @@ $e = $_POST['totalsumm'];
 
 $datetime = date('Y.m.d H:i:s');
 
-
 $id_user = $_SESSION['user']['id_user'];
 
 $order = mysqli_query($connect, "INSERT INTO `orders`(`id_order`, `id_user`, `total_price`, `date`)
  VALUES (NULL,'$id_user','summa', '$datetime')");
 
 $lastid = mysqli_insert_id($connect);
-
-
 
 $output = "<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'></head><body><table>";
 $order = "";

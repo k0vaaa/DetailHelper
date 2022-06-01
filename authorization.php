@@ -20,7 +20,7 @@
 			<label>Пароль</label>
 			<input type="password" name="password"placeholder="Введите пароль">
 			<button type="submit">Войти</button>
-			<p>У Вас нет аккаунта? - <a href="registration.php">Зарегистрируйстесь</a>!</p>
+			<p>У Вас нет аккаунта? - <a href="registration.php">Зарегистрируйтесь</a>!</p>
 			<?php 
 				if ($_SESSION['message']) {
 					echo '<p class="errors">'.$_SESSION['message'].'</p>';

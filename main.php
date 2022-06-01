@@ -133,7 +133,8 @@ require_once 'vendor/querytodatabase.php';
                                                 <p><b>Марка: </b><?=$product2['brand']?></p>
                                                 <p><b>Модель: </b><?=$product2['model']?></p>
                                                 <p><b>Артикул: </b><?=$product2['articul']?></p>
-                                                <p><b>Наличие: </b><?=$product2['quantity']?></p>
+                                                <p><b>Наличие: </b><?=$product2['quantity']?> шт.</p>
+                                                <p><b>Категория: </b><?=$product2['categoryname']?></p>
                                                 <br>
                                                 <p id="money"><b>Цена: </b><?=$product2['price']?>.<sup>00</sup> &#8381 <? if ($product2['quantity']>0){?>
                                                     <button id="popuporderbtn" type="submit" class="add-to-cart" data-id="<?=$product2['id_product']?>"

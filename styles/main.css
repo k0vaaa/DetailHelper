@@ -100,13 +100,13 @@ body {
 #firstblock h1{
 	margin: 0;
 	font-weight: bold;
-	font-size: 4em;
+	font-size: 5em;
 }
 
 #firstblock p{
 	margin-left: 100px;
 	margin-right: 100px;
-	font-size: 1.5em;
+	font-size: 2.5em;
 }
 #firstblock {
 	padding-top: 150px;
@@ -115,13 +115,39 @@ body {
 
 
 #tocatalog {
-	text-decoration: none;
+	font-family: Montserrat, Arial, sans-serif;
+	border: none;
+	background: none;
+	font-weight: 500;
+	font-size: 1.5em;
+	width: 10%;
+	height: 40px;
 	cursor: pointer;
-}
-#tocatalog:hover {
+	text-decoration: none;
+	color: #2196f3;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	text-align: center;
 
 }
 
+#tocatalog:after {
+	background-color: #2196f3; /* Цвет линии при наведении на нее курсора мыши */
+	display: block;
+	content: "";
+	height: 2px; /* Высота линии */
+	width: 0;
+	-webkit-transition: width .3s ease-in-out;
+	-moz--transition: width .3s ease-in-out;
+	transition: width .3s ease-in-out;
+}
+
+#tocatalog:active:after,
+#tocatalog:hover:after,
+#tocatalog:focus:after {
+	width: 100%;
+}
 
 #secondblock {
 	background-color: white;
@@ -349,6 +375,7 @@ form>button {
 }
 
 .card #name {
+	word-wrap: anywhere;
 	font-style: normal;
 	font-weight: 500;
 	font-size:1.6em;
@@ -441,6 +468,7 @@ form>button {
     margin-right: 30px;
     display: flex;
     flex-direction: row;
+	margin-top: 50px;
 
 } 
 
@@ -1097,7 +1125,7 @@ form {
 	height: 40px;
 	cursor: pointer;
 	text-decoration: none;
-	color: #19af05;
+	color: #2196f3;
 	padding: 0;
 	margin: 0;
 	display: inline-block;
@@ -1106,26 +1134,37 @@ form {
 	/*vertical-align: bottom;*/
 	/*box-shadow: 0px 4px 3px rgb(0 0 0 / 6%);*/
 }
-#button44314134134314131 {
-	font-family: Montserrat, Arial, sans-serif;
-	border: none;
-	background: none;
-	font-weight: 500;
-	font-size: 15px;
-	width: 25%;
-	height: 40px;
-	cursor: pointer;
-	text-decoration: none;
-	color: #8b0000;
-	padding: 0;
-	margin: 0;
-	/*border-radius: 20px;*/
-	/*vertical-align: bottom;*/
-	/*box-shadow: 0px 4px 3px rgb(0 0 0 / 6%);*/
-}
+/*#button44314134134314131 {*/
+/*	font-family: Montserrat, Arial, sans-serif;*/
+/*	border: none;*/
+/*	background: none;*/
+/*	font-weight: 500;*/
+/*	font-size: 15px;*/
+/*	width: 25%;*/
+/*	height: 40px;*/
+/*	cursor: pointer;*/
+/*	text-decoration: none;*/
+/*	color: #8b0000;*/
+/*	padding: 0;*/
+/*	margin: 0;*/
+/*	!*border-radius: 20px;*!*/
+/*	!*vertical-align: bottom;*!*/
+/*	!*box-shadow: 0px 4px 3px rgb(0 0 0 / 6%);*!*/
+/*}*/
 
-.button1:after {
-	background-color: #19af05; /* Цвет линии при наведении на нее курсора мыши */
+/*.button1:after {*/
+/*	background-color: #19af05; !* Цвет линии при наведении на нее курсора мыши *!*/
+/*	display: block;*/
+/*	content: "";*/
+/*	height: 2px; !* Высота линии *!*/
+/*	width: 0;*/
+/*	-webkit-transition: width .3s ease-in-out;*/
+/*	-moz--transition: width .3s ease-in-out;*/
+/*	transition: width .3s ease-in-out;*/
+/*}*/
+
+#button1:after {
+	background-color: #2196f3; /* Цвет линии при наведении на нее курсора мыши */
 	display: block;
 	content: "";
 	height: 2px; /* Высота линии */
@@ -1135,21 +1174,9 @@ form {
 	transition: width .3s ease-in-out;
 }
 
-#button1:after {
-	background-color: #19af05; /* Цвет линии при наведении на нее курсора мыши */
-	display: block;
-	content: "";
-	height: 2px; /* Высота линии */
-	width: 0%;
-	-webkit-transition: width .3s ease-in-out;
-	-moz--transition: width .3s ease-in-out;
-	transition: width .3s ease-in-out;
-}
-
 #button1:active:after,
 #button1:hover:after,
 #button1:focus:after {
-	color: #4b4b4b;
 	width: 100%;
 }
 

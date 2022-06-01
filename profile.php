@@ -36,7 +36,7 @@
 
 		<div class="backpic">
 			<div class="containerforprof">
-				<h1>Личный кабинет</h1>
+<!--				<h1>Личный кабинет</h1>-->
 				<div class="profile">
 					<div class="info">
 						<p>Имя: <span><?=$_SESSION['user']['fullname']?></span></p>
