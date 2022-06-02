@@ -80,7 +80,7 @@ require_once 'vendor/querytodatabase.php';
     </div>
 </header>
 <div id="firstblock" class="block"> <!--Верхний блок страницы-->
-    <h1>Приветствуем Вас на Detail Helper!</h1>
+    <h1>Приветствуем Вас, <?=$_SESSION['user']['login']?>!</h1>
     <p>Выбирайте товары для Вашего авто быстро и удобно!</p>
     <a id="tocatalog">В каталог</a>
 </div>

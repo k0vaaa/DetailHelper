@@ -14,8 +14,13 @@ function createTable() { /*функция создания таблицы с з�
     const good = localStorage.cart.good;
     for (let i=0; i<cart.length; i++) { /*цикл на вставку строк в таблицу с переменными*/
         out += `<tr>`;
-        for (let key of Object.values(cart[i].good)  ) {
-            out+= `<td>`+ key+`</td><br>`
+        for (let [key,value] of Object.entries(cart[i].good)  ) {
+            if (key=='price'){
+                out+= `<td>`+ value+`.<sup>00</sup> &#8381 </td><br>`
+            }
+            else{
+                out+= `<td>`+ value+`</td><br>`
+            }
         }
         out+= `</tr>`
     }
