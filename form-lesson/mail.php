@@ -17,7 +17,7 @@ $datetime = date('Y.m.d H:i:s');
 $id_user = $_SESSION['user']['id_user'];
 
 $order = mysqli_query($connect, "INSERT INTO `orders`(`id_order`, `id_user`, `total_price`, `date`)
- VALUES (NULL,'$id_user','summa', '$datetime')");
+ VALUES (NULL,'$id_user','$e', '$datetime')");
 
 $lastid = mysqli_insert_id($connect);
 
