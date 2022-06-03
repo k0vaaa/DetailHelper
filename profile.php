@@ -22,7 +22,7 @@ $result = mysqli_query($connect,"SELECT `id_order`, `total_price`, `date`,`id_us
 <header class="header"> <!-- контейнер "шапка", содержащий навигацию-->
     <div class="header_section">
         <div class="header_item logo">
-            <img src="content/favicon.jpg" alt="" width="50" height="50">
+            <img src="content/logo.svg" alt="" width="50" height="50">
             <h1 id="logotitle">Detail Helper</h1> <!--убрать h1-->
         </div>
     </div>
@@ -59,12 +59,13 @@ $result = mysqli_query($connect,"SELECT `id_order`, `total_price`, `date`,`id_us
                 else {
                     ?>
                     <div class="table_responsive1">
+
                         <table class="table">
                             <thead>
                             <tr>
-                                <th><div>Номер заказа</div></th>
-                                <th><div>Итоговая сумма (руб.)</div></th>
-                                <th><div>Дата и время</div></th>
+                                <th>Номер заказа</th>
+                                <th>Итоговая сумма (руб.)</th>
+                                <th>Дата и время</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -113,15 +114,19 @@ $result = mysqli_query($connect,"SELECT `id_order`, `total_price`, `date`,`id_us
 
                 </div>
                 <p id="emptycart">Корзина пуста, обратитесь к нашему <a id="empycartlink" href="main_authorized.php">каталогу</a> !</p>
+                <div class="ordermenu no">
+                    <div class="left">
+                        <a href="#popup2" id="two">Очистить корзину</a>
+                    </div>
+                    <div class="right">
+                    <a href="#popup1" id="three">Изменить заказ</a>
+                    <a href="#popup3" id="one">Оформить</a>
+                    </div>
+                </div>
             </div>
 
         </div>
-        <div class="ordermenu no">
 
-            <a href="#popup3" id="one">Оформить</a>
-            <a href="#popup2" id="two">Удалить</a>
-            <a href="#popup1" id="three">Изменить</a>
-        </div>
         <div id="popup1" class="popup">
             <a href="#header" class="popup__area"></a>
             <div class="popup__body">

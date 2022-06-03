@@ -7,7 +7,7 @@ require_once 'vendor/querytodatabase.php';
 <head>
     <meta charset="utf-8">
     <title>DetailHelper</title>
-    <link rel="icon" type="image/jpg" href="content/favicon.jpg">
+    <link rel="icon" type="image/jpg" href="content/logo.svg">
     <link rel="stylesheet" href="/styles/main.css"> <!--подключение файла стилей-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@ require_once 'vendor/querytodatabase.php';
 <header class="header"> <!-- контейнер "шапка", содержащий навигацию-->
     <div class="header_section">
         <div class="header_item logo">
-            <img src="content/favicon.jpg" alt="" width="50" height="50">
+            <img src="content/logo.svg" alt="" width="50" height="50">
             <h1 id="logotitle">Detail Helper</h1> <!--убрать h1-->
         </div>
     </div>
@@ -73,13 +73,13 @@ require_once 'vendor/querytodatabase.php';
     <div class="catalog">
         <div class="filter">
             <h1 id="filter__title">Фильтры</h1>
-<!--            <div class="filters">-->
-<!--                <p>Сортировка товаров:</p>-->
-<!--                <button type="button" data-sort="price:asc">Сортировка по цене (по возрастанию)</button>-->
-<!--                <button type="button" data-sort="price:desc">Сортировка по цене (по убыванию)</button>-->
-<!--                <button type="button" data-sort="name:asc">Сортировка по бренду (A->Z)</button>-->
+            <!--            <div class="filters">-->
+            <!--                <p>Сортировка товаров:</p>-->
+            <!--                <button type="button" data-sort="price:asc">Сортировка по цене (по возрастанию)</button>-->
+            <!--                <button type="button" data-sort="price:desc">Сортировка по цене (по убыванию)</button>-->
+            <!--                <button type="button" data-sort="name:asc">Сортировка по бренду (A->Z)</button>-->
 
-<!--            </div>-->
+            <!--            </div>-->
             <div class="select">
                 <div class="select__header">
                     <span class="select__current">Бренд</span>
@@ -88,7 +88,7 @@ require_once 'vendor/querytodatabase.php';
 
                 <div class="select__body">
                     <? foreach ($products1 as $product1):?>
-                    <div class="select__item" data-filter=".category-<?=$product1['brand']?>"><?=$product1['brand']?></div>
+                        <div class="select__item" data-filter=".category-<?=$product1['brand']?>"><?=$product1['brand']?></div>
                     <?endforeach?>
 
                     <div class="select__item" data-filter="all">Все бренды</div>
@@ -163,6 +163,5 @@ require_once 'vendor/querytodatabase.php';
 <script src="/scripts/index.js"></script> <!--Подключение основного JS файла к документу-->
 </body>
 </html>
-
 
 

@@ -92,12 +92,16 @@ function deleteAll() { /*функция, срабатывающая при на�
 }
 function cartCheck() { /*проверка корзины на пустоту для измененного вывода корзины*/
     if (cart.length===0) { /*пустая корзина - выводим надпись*/
-        $('.emptycart').addClass ('yes');
+        $('#emptycart').addClass ('yes');
+        // document.querySelector('.emptycart').style.display = 'block';
     }
     else { /*коризна не пуста - выводим таблицу с содержимым корзины*/
         $('.zakaz').removeClass ('no'); /*скрытие элементов согласно условию*/
+        // document.querySelector('.zakaz').style.display = 'block';
         $('#emptycart').addClass ('no');
+        // document.querySelector('#emptycart').style.display = 'none';
         $('.ordermenu').removeClass ('no');
+        // document.querySelector('.ordermenu').style.display = 'block';
         createTable(); /*вывод таблицы*/
         changeCart(); /*формирование содержимого окна "изменить заказ"*/
     }

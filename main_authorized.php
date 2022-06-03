@@ -11,7 +11,7 @@ require_once 'vendor/querytodatabase.php';
 <head>
     <meta charset="utf-8">
     <title>DetailHelper</title>
-    <link rel="icon" type="image/jpg" href="content/favicon.jpg">
+    <link rel="icon" type="image/svg" href="content/logo.svg">
     <link rel="stylesheet" href="/styles/main.css"> <!--подключение файла стилей-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@ require_once 'vendor/querytodatabase.php';
 <header class="header"> <!-- контейнер "шапка", содержащий навигацию-->
     <div class="header_section">
         <div class="header_item logo">
-            <img src="content/favicon.jpg" alt="" width="50" height="50">
+            <img src="content/logo.svg" alt="" width="50" height="50">
             <h1 id="logotitle">Detail Helper</h1> <!--убрать h1-->
         </div>
     </div>
