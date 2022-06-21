@@ -9,11 +9,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Authorization</title>
+    <link rel="icon" type="image/svg" href="content/logo.svg">
 	<link rel="stylesheet" href="/styles/auth.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="backplateforauth">
+        <div class="logo">
+            <img src="content/logo.svg" alt="">
+            <h1 id="logotitle">Detail Helper</h1>
+        </div>
 		<form action="vendor/login.php" method="post">
 			<label>Логин</label>
 			<input type="text"  name="login" placeholder="Введите логин">

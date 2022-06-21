@@ -26,13 +26,16 @@ function createTable() { /*функция создания таблицы с з�
     }
     $('.elements').html(out); /*вывод содержимого таблицы в определенный HTML-класс*/
 }
+
+
 function changeCart() { /*функция формирования содержимого окна "Изменение заказа"*/
     let out = '';
     const good = localStorage.cart.good;
     for (let i=0; i<cart.length; i++) { /*цикл на вставку строки-макета*/
-        out+= cart[i].good.name + ` -- ` + cart[i].good.price + ` руб. `
+        out += `<tr id="basketrow">`;
+        out+= `<td>` + cart[i].good.name + ` для ` +cart[i].good.brand + ` ` + cart[i].good.model + `<td>`
             + `<button class ="del-goods" data-id="${cart[i].id}">x</button>` + `<button class ="minus-goods" data-id="${cart[i].id}">-</button>`
-            + cart[i].good.count + ` шт.`+ `<button class ="plus-goods" data-id="${cart[i].id}">+</button><br>`;
+            + cart[i].good.count + ` шт.`+ `<button class ="plus-goods" data-id="${cart[i].id}">+</button></td></td>`;
     }
     $('.basket').html(out); /*вывод содержимого окна в определенный HTML-класс*/
 
@@ -53,6 +56,9 @@ function changeCart() { /*функция формирования содержи
         location.replace("/profile.php");
     }
 };
+
+
+
 function delGoods(id) { /*функция удаление единицы товара с получением идентификатора*/
     const good = JSON.parse(localStorage.cart);
     const targetIndex = cart.findIndex((item) => item.id === id);
@@ -66,7 +72,12 @@ function plusGoods(id) { /*функция увеличения количест�
     let cart= JSON.parse(localStorage.cart);
     const targetIndex = cart.findIndex((item) => item.id === id);
     if (targetIndex !== -1) { /*условие на поиск соответствия с идентификатором*/
-        cart[targetIndex].good.count++; /*увеличение количества товара с указанным идентификатором на единицу*/
+        if (cart[targetIndex].good.count < cart[targetIndex].maxvalue ) {
+            cart[targetIndex].good.count++;
+        }
+        else {
+            alert('В наличии нет такого количества выбранного товара. Максимальное количество для заказа:'+cart[targetIndex].maxvalue)
+        }
         localStorage.cart = JSON.stringify(cart);
         loadCart(); /*перезагрузка корзины*/
     }
@@ -121,9 +132,11 @@ function totalSum() {
     }
     return summa;
 }
+
 function sendLocalStorage(){ /*функция отправки содержимого корзины, используемого при формировании email-письма*/
     let cart = JSON.stringify(localStorage.getItem('cart'));
     document.querySelector('[name=receivecart]').value = cart;
+    console.log(cart);
     document.querySelector('[name=totalsumm]').value = totalSum();
 }
 

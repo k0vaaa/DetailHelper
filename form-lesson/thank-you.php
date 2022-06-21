@@ -1,21 +1,29 @@
 <?php
 session_start();
 require_once '../vendor/connect.php';
-header("Refresh: 3; url=../profile.php");
+
+if ($_SESSION['user']){
+    header("Refresh: 3; url=../profile.php");
+}
+else {
+    header("Refresh: 3; url=../main.php");
+}
+$meow = $lastid;
 //$id_user = $_SESSION['user']['id_user'];
 //$datetime = date('Y.m.d H:i:s');
 //$getnum = mysqli_query($connect, "SELECT `id_order`FROM `orders` WHERE `id_user` = '$id_user' AND `id_order`=WHERE id=LAST_INSERT_ID()");
 //if (mysqli_num_rows($getnum)==0){
-//    echo 'blya';
+//    echo '1';
 //}
 //else {
-//    echo 'pizdec';
+//    echo '2';
 //}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+      <link rel="icon" type="image/svg" href="content/logo.svg">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->

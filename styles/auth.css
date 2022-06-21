@@ -18,9 +18,10 @@ body {
 
 .backplateforauth {
 	width: 20%;
-	height: 35%;
+	height: 40%;
 	border-radius: 20px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background-color:#FFFF;
@@ -28,9 +29,10 @@ body {
 
 .backplateforreg {
 	width: 20%;
-	height: 60%;
+	height: 70%;
 	border-radius: 20px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background-color:#FFFF;
@@ -72,4 +74,20 @@ a {
 	border:1px solid red;
 	padding: 10px;
 	text-align: center;
+}
+
+
+.logo {
+	padding: 5px 10px 20px 0 ;
+	display: flex;
+	flex-direction: row;
+}
+
+.logo h1 {
+	margin: 0 0 0 20px;
+	padding-top: 5px;
+}
+.logo img {
+	width: 50px;
+	height: 50px;
 }
